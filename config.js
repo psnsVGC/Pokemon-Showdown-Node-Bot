@@ -379,10 +379,3 @@ exports.github = {
 exports.groupchats = {};
 
 exports.groupChatTryJoinInterval = 60 * 1000;
-
-/* Test example
-exports.groupchats['groupchat-ecuacion-test'] = {
-	toJoin: ['/join groupchat-ecuacion-test'],
-	onJoin: ['Hi guys!'],
-	onLeave: []
-};
