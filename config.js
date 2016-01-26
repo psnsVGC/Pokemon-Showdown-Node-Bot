@@ -1,4 +1,4 @@
-﻿/*
+/*
 	config.js - Configuration File
 */
 
@@ -11,11 +11,11 @@
 *
 */
 
-exports.server = 'localhost';
+exports.server = 'urban-server-psns.c9users.io';
 
-exports.port = 8000;
+exports.port = 80;
 
-exports.serverid = 'localhost';
+exports.serverid = 'urban-server-psns.c9users.io:80';
 
 exports.autoReconnectDelay = 10 * 1000;
 exports.connectionTimeout = 2 * 60 * 1000;
@@ -44,9 +44,9 @@ exports.watchconfig = true;
 * Login Details
 */
 
-exports.nick = '';
+exports.nick = 'Urban Bot';
 
-exports.pass = '';
+exports.pass = 'UrbanBot123456789';
 
 exports.autoReloginDelay = 60 * 1000;
 
@@ -54,7 +54,7 @@ exports.autoReloginDelay = 60 * 1000;
 * Rooms to join
 */
 
-exports.rooms = ['lobby'];
+exports.rooms = ['lobby', 'development'];
 /*
 * exports.rooms = 'all'; //For joining all rooms
 * exports.rooms = 'official'; //For joining official rooms
@@ -70,14 +70,14 @@ exports.ignoreRooms = { //Rooms listed here will be ignored by CommandParser (bo
 	//roomid: true
 };
 
-exports.initCmds = ['|/avatar 120']; // Other commands (avatar, blockchallenges, etc)
+exports.initCmds = ['|/avatar 167']; // Other commands (avatar, blockchallenges, etc)
 
 /*
 * Auth configuration
 */
 
 exports.exceptions = {
-	// 'userid': true
+	psns: true,
 };
 
 /*
@@ -123,7 +123,7 @@ exports.permissionExceptions = {
 	'games': '#'
 };
 
-exports.botguide = "https://github.com/Ecuacion/Pokemon-Showdown-Node-Bot/blob/master/commands/README.md";
+exports.botguide = "";
 
 exports.pmhelp = ""; //When you pm the bot but don't use a command, it replies you this message. Example: "Hi, I'm a bot. Use .help to view a command guide"
 
@@ -259,23 +259,15 @@ exports.losemsg = ['gg', 'wp'];
 
 exports.battleMessages = {
 	/* Examples of battle messages:
-	'crit': {
-		'self': ['lol that hax', 'stop haxing pls'],
-		'foe': ['sorry', 'wow sorry for that', 'get critted']
+	'-crit': {
+		'self': [], //Example: ['lol that hax', 'stop haxing pls']
+		'foe': [] //Example: ['sorry', 'wow sorry for that', 'get critted']
 	},
-	'miss': {
-		'self': ['wow hax', 'lol #poke you\'re blind']
+	'-miss': {
+		'self': [] //Example: ['wow hax', 'lol #poke you\'re blind']
 	}
 	*/
 };
-
-exports.battleModules = {
-	/* Algorithms for use in battles */
-	"challengecup1v1": "ingame-nostatus",
-	"1v1": "ingame-nostatus"
-};
-
-//exports.battleLog = {ageOfLogs: 1}; // Days
 
 exports.abandonedBattleAutojoin = true;
 
@@ -376,8 +368,8 @@ exports.autoInvite = [
 
 exports.github = {
 	room: 'development',
-	secret: "",
-	port: 3420
+	secret: "59a081ae31430fcf4c8b020d560241b5daea19f3",
+	port: 80
 };
 
 /*
@@ -394,4 +386,3 @@ exports.groupchats['groupchat-ecuacion-test'] = {
 	onJoin: ['Hi guys!'],
 	onLeave: []
 };
-*/
